@@ -1,0 +1,122 @@
+\chapter{Sequences of Real Numbers}\label{chp:sequences-of-real-numbers}
+
+In these notes we closely follow~\cite{swokowski1979calculus}.
+
+\begin{definition}\label{def:sequences-of-real-numbers}
+  A sequence of real numbers is a function from the set of positive integers to the set of all real numbers.
+\end{definition}
+
+It is customary to drop the functional notation in favor of the subscript notation to denote sequences of real numbers. So, if $f:\mathbb{N}\to\mathbb{R}$ is a sequence of real numbers, given any $n\in\mathbb{N}$, we write $f_{n}$ in order to represent the real number $f(n)$. It's also customary to represent such a function with more compact notations such as $(f_{n})_{n\in\mathbb{N}}$ or $(f_{n})$.
+
+\begin{example}
+  List the first four terms and the tenth term of the sequence whose nth term is as follows:
+  \begin{enumerate}[(a)]
+    \item
+      $a_{n}=\dfrac{n}{n+1}$;
+    \item
+      $a_{n}=2+(0.1)^{n}$;
+    \item
+      $a_{n}=(-1)^{n+1}\dfrac{n^{2}}{3n-1}$;
+    \item
+      $a_{n}=4$.
+  \end{enumerate}
+\end{example}
+
+Some sequences of real numbers $(a_{n})$ have the property that, as $n$ increases its value indefinitely, the term $a_{n}$ gets closer and closer to some real number $L$. In other words, the number $\abs{a_{n}-L}$ decreases to zero as $n$ increases to infinity. For example, if
+\[
+  a_{n}=2+\dfrac{1}{2^{n}},
+\]
+then, we see that
+\[
+  \abs{a_{n}-L}=\abs*{2+\dfrac{1}{2^{n}}-2}=\dfrac{1}{2^{n}},
+\]
+decreases to zero as $n$ increases to infinity.
+
+\begin{definition}\label{def:the-limit-of-a-sequence-of-real-numbers}
+  Let $(a_{n})$ be a sequence of real numbers. Then, we say that the limit of the $a_{n}$ as $n$ approaches infinity is a real number $L$ if for every $\epsilon>0$ there corresponds a real number $M$ such that $\abs{a_{n}-L}<\epsilon$ whenever $n>M$.
+\end{definition}
+
+If $L\in\mathbb{R}$ is the limit of a sequence of real numbers $(a_{n})$, then we write
+\[
+  \lim\limits_{n\to\infty}a_{n}=L.
+\]
+
+\begin{proposition}\label{prop:uniqueness-of-the-limit-of-a-sequence}
+  Let $(a_{n})$ be a sequence of real numbers. Then, for any real numbers $L$ and $M$, if
+  \[
+    \lim\limits_{n\to\infty}a_{n}=L\quad\text{and}\quad\lim\limits_{n\to\infty}a_{n}=M,
+  \]
+  then we must have $L=M$.
+\end{proposition}
+
+\begin{proof}[Proof of Proposition~\ref{prop:uniqueness-of-the-limit-of-a-sequence}]
+  Suffices to say that
+  \[
+    \abs{L-M}\leqslant{\abs{a_{n}-L}+\abs{a_{n}-M}},
+  \]
+  for every $n\in\mathbb{N}$.
+\end{proof}
+
+\begin{proposition}\label{prop:arithmetic-properties-of-limits}
+  If $\lim\limits_{n\to\infty}a_{n}=L$ and $\lim\limits_{n\to\infty}b_{n}=M$, then:
+  \begin{enumerate}[(a)]
+    \item
+      $\lim\limits_{n\to\infty}(a_{n}+b_{n})=L+M$;
+    \item
+      $\lim\limits_{n\to\infty}(a_{n}-b_{n})=L-M$;
+    \item
+      $\lim\limits_{n\to\infty}(a_{n}b_{n})=LM$;
+    \item
+      $\lim\limits_{n\to\infty}\dfrac{a_{n}}{b_{n}}=\dfrac{L}{M}$, if $M\neq{0}$.
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}[Proof of Proposition~\ref{prop:arithmetic-properties-of-limits}]
+  In class exercise.
+\end{proof}
+
+\begin{example}
+  Find $\lim\limits_{n\to\infty}\frac{2n}{5n-3}$.
+\end{example}
+
+\begin{theorem}[The Sandwich Theorem]\label{thm:the-sandwich-theorem-for-sequences}
+  If $(a_{n})$, $(b_{n})$ and $(c_{n})$ are sequences of real numbers such that $a_{n}\leqslant{b_{n}}\leqslant{c_{n}}$ for all $n$, and if $\lim\limits_{n\to\infty}a_{n}=L=\lim\limits_{n\to\infty}c_{n}$, then $\lim\limits_{n\to\infty}b_{n}=L$.
+\end{theorem}
+
+\begin{proof}[Proof of Theorem~\ref{thm:the-sandwich-theorem-for-sequences}]
+  For every $\epsilon>0$ there corresponds a real number $M$ such that both $\abs{a_{n}-L}<\epsilon$ and $\abs{c_{n}-L}<\epsilon$, whenever $n>M$. Therefore, we have that
+  \[
+    L-\epsilon<a_{n}\leqslant{b_{n}}\leqslant{c_{n}}<L+\epsilon,
+  \]
+  from what it follows that $L-\epsilon<b_{n}<L+\epsilon$ or, equivalently, $\abs{b_{n}-L}<\epsilon$, for every $n\in\mathbb{N}$ with $n>M$. This completes the proof.
+\end{proof}
+
+\begin{proposition}
+  Let $(a_{n})$ be a sequence of real numbers. Then, the following are true:
+  \begin{enumerate}[(a)]
+    \item
+      If $\lim\limits_{n\to\infty}a_{n}=L$, then $\lim\limits_{n\to\infty}\abs{a_{n}}=\abs{L}$;
+    \item
+      If $\lim\limits_{n\to\infty}\abs{a_{n}}=0$, then $\lim\limits_{n\to\infty}a_{n}=0$.
+  \end{enumerate}
+\end{proposition}
+
+TODO
+
+\begin{itemize}
+  \item
+    Define bounded sequences
+  \item
+    Define monotonic sequences
+\end{itemize}
+
+\begin{theorem}
+  A bounded, monotonic sequence of real numbers has a limit.
+\end{theorem}
+
+TODO
+
+\begin{itemize}
+  \item
+    State the completeness property of $\mathbb{R}$.
+\end{itemize}
