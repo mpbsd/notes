@@ -21,10 +21,10 @@ final:
 	$(DOC_VIEWER) main.pdf
 
 clean:
-	find . -type f -name main.aux -delete
-	find . -type f -name main.blg -delete
-	find . -type f -name main.log -delete
-	find . -type f -name main.out -delete
-	find . -type f -name main.toc -delete
+	find . -type f -name main.aux | xargs rm -f
+	find . -type f -name main.blg | xargs rm -f
+	find . -type f -name main.log | xargs rm -f
+	find . -type f -name main.out | xargs rm -f
+	find . -type f -name main.toc | xargs rm -f
 
 .PHONY: draft final clean

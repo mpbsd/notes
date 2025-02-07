@@ -1,24 +1,13 @@
 {
-  "MC": {
-    "code": "IME0356",
-    "discipline": "Cálculo 2A",
-    "class": "C",
-    "workload": "96H",
-    "course": "Bacharelado em Engenharia Química",
-    "department": "IQ",
-    "semester": "2024/2",
-    "room": "305, CAA, CAS",
-    "routine": "246M23"
-  },
-  "NA": {
-    "code": "IME0065",
-    "discipline": "Cálculo Numérico",
+  "001": {
+    "code": "IME0416",
+    "discipline": "Teoria de Galois",
     "class": "A",
     "workload": "64H",
-    "course": "Bacharelado em Ciência da Computação",
-    "department": "INF",
-    "semester": "2024/2",
+    "course": "Bacharelado em Matemática",
+    "department": "IME",
+    "semester": "2025/1",
     "room": "",
-    "routine": "24M45"
+    "routine": "35T34"
   }
 }
