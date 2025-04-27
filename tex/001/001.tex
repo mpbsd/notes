@@ -1,16 +1,11 @@
 \section{The elements of the theory}\label{sec:the_elements_of_the_theory}
 
 \begin{theorem}\label{thm:distinct-field-automorphisms-are-linearly-independent}
-	If $K$ is a field and if $\sigma_{1},\ldots,\sigma_{n}$ are distinct
-	automorphisms of $K$ then it is impossible to find in $K$ elements
-	$a_{1},\ldots,a_{n}$ not all equal to $0$ such that
-	$a_{1}\sigma(u)+\cdots+a_{n}\sigma(u)=0$ for all ${u}\in{K}$.
+	If $K$ is a field and if $\sigma_{1},\ldots,\sigma_{n}$ are distinct automorphisms of $K$ then it is impossible to find in $K$ elements $a_{1},\ldots,a_{n}$ not all equal to $0$ such that $a_{1}\sigma(u)+\cdots+a_{n}\sigma(u)=0$ for all ${u}\in{K}$.
 \end{theorem}
 
 \begin{definition}\label{def:fixed-field}
-	If $G$ is a group of automorphisms of $K$, then the fixed field of $G$ is the
-	set of all elements ${a}\in{K}$ such that $\sigma(a)=a$ for all
-	${\sigma}\in{G}$.
+	If $G$ is a group of automorphisms of $K$, then the fixed field of $G$ is the set of all elements ${a}\in{K}$ such that $\sigma(a)=a$ for all ${\sigma}\in{G}$.
 \end{definition}
 
 \begin{lemma}\label{lem:the-fixed-field-is-in-fact-a-subfield}
@@ -18,22 +13,15 @@
 \end{lemma}
 
 \begin{definition}\label{def:automorphism-group-relative-to-a-subfield}
-	Let $K$ be a field and let $F$ be a subfield of $K$. Then the group of
-	automorphisms of $K$ relative to $F$, written as $G(K,F)$, is the set of all
-	automorphisms of $K$ leaving every element of $F$ point wise fixed; that is,
-	the automorphism $\sigma$ of $K$ is in $G(K,F)$ if and only if
-	$\sigma(\alpha)=\alpha$ for every ${\alpha}\in{K}$.
+	Let $K$ be a field and let $F$ be a subfield of $K$. Then the group of automorphisms of $K$ relative to $F$, written as $G(K,F)$, is the set of all automorphisms of $K$ leaving every element of $F$ point wise fixed; that is, the automorphism $\sigma$ of $K$ is in $G(K,F)$ if and only if $\sigma(\alpha)=\alpha$ for every ${\alpha}\in{K}$.
 \end{definition}
 
 \begin{theorem}\label{thm:finite-extensions-make-a-finite-relative-automorphism-group}
-	If $K$ is a finite extension of $F$ then $G(K,F)$ is a finite group and its
-	order is not greater than $[K:F]$.
+	If $K$ is a finite extension of $F$ then $G(K,F)$ is a finite group and its order is not greater than $[K:F]$.
 \end{theorem}
 
 \begin{theorem}\label{thm:symmetric-rational-functions}
-	Let $F$ be a field and let $F(x_{1},\ldots,x_{n})$ be the field of rational
-	functions in $x_{1},\ldots,x_{n}$ over $F$. Let $S$ be the field of symmetric
-	rational functions. Then:
+	Let $F$ be a field and let $F(x_{1},\ldots,x_{n})$ be the field of rational functions in $x_{1},\ldots,x_{n}$ over $F$. Let $S$ be the field of symmetric rational functions. Then:
 	\begin{enumerate}
 		\item $[F(x_{1},\ldots,x_{n}):S]=n!$;
 		\item $G(F(x_{1},\ldots,x_{n}),S)=S_{n}$, the symmetric group of degree $n$;
@@ -46,13 +34,11 @@
 \end{theorem}
 
 \begin{definition}\label{def:normal-extension}
-	$K$ is a normal extension of $F$ if $K$ is a finite extension of $F$ such that
-	$F$ is the fixed field of $G(K,F)$.
+	$K$ is a normal extension of $F$ if $K$ is a finite extension of $F$ such that $F$ is the fixed field of $G(K,F)$.
 \end{definition}
 
 \begin{theorem}\label{thm:on-the-subfield-subgroup-correspondence}
-	Let $K$ be a normal extension of $F$ and let $H$ be a subgroup of $G(K,F)$.
-	Let
+	Let $K$ be a normal extension of $F$ and let $H$ be a subgroup of $G(K,F)$. Let
 	\[
 		K_{H}=\left\{{x}\in{K}:\sigma(x)=x\text{ for all }{\sigma}\in{H}\right\}
 	\]
@@ -64,58 +50,49 @@
 \end{theorem}
 
 \begin{theorem}\label{thm:a-characterization-of-normality}
-	$K$ is a normal extension of $F$ if and only if $K$ is the splitting field of
-	some polynomial over $F$.
+	$K$ is a normal extension of $F$ if and only if $K$ is the splitting field of some polynomial over $F$.
 \end{theorem}
 
 \begin{lemma}\label{lem:the-action-of-the-galois-group-of-a-normal-extension-is-transitive}
-	Let $K$ be the splitting field of $f(x)$ in $F[x]$ and let $p(x)$ be an
-	irreducible factor of $f(x)$ in $F[x]$. If the roots of $p(x)$ are
-	$\alpha_{1},\ldots,\alpha_{r}$, then for each ${i}\in\{1,\ldots,r\}$ there is
-	an automorphism ${\sigma_{i}}\in{G(K,F)}$ such that
-	$\sigma_{i}(\alpha_{1})=\alpha_{i}$.
+	Let $K$ be the splitting field of $f(x)$ in $F[x]$ and let $p(x)$ be an irreducible factor of $f(x)$ in $F[x]$. If the roots of $p(x)$ are $\alpha_{1},\ldots,\alpha_{r}$, then for each ${i}\in\{1,\ldots,r\}$ there is an automorphism ${\sigma_{i}}\in{G(K,F)}$ such that $\sigma_{i}(\alpha_{1})=\alpha_{i}$.
 \end{lemma}
 
 \begin{definition}\label{def:galois-group}
-	Let $f(x)$ be a polynomial in $F[x]$ and let $K$ be its splitting field over
-	$F$. The Galois group of $f(x)$ is the group $G(K,F)$ of all the automorphisms
-	of $K$ leaving every element of $F$ point wise fixed.
+	Let $f(x)$ be a polynomial in $F[x]$ and let $K$ be its splitting field over $F$. The Galois group of $f(x)$ is the group $G(K,F)$ of all the automorphisms of $K$ leaving every element of $F$ point wise fixed.
 \end{definition}
 
 \begin{lemma}\label{lem:another-characterization-of-normality}
-  Let $K$ be the splitting field over $F$ of some polynomial ${f(x)}\in{F[x]}$.
-  Then, an extension $T$ of $F$ in $K$ is a normal extension of $F$ if and only
-  if $\sigma(T)\subset{T}$ for every ${\sigma}\in{G(K,F)}$.
+	Let $K$ be the splitting field over $F$ of some polynomial ${f(x)}\in{F[x]}$. Then, an extension $T$ of $F$ in $K$ is a normal extension of $F$ if and only if $\sigma(T)\subset{T}$ for every ${\sigma}\in{G(K,F)}$.
 \end{lemma}
 
 \begin{proof}
-  Let's write $G(K,F)=\{\sigma_{1}=id,\sigma_{2},\ldots,\sigma_{n}\}$, where $n=\order{G(K,F)}=[K:F]$. Then, assume that $T$ is any extension of $F$ in $K$ such that $\sigma(T)\subset{T}$ for every ${\sigma}\in{G(K,F)}$. We want to show that $T$ is the splitting field of some polynomial with coefficients in $F$. Since $[T:F]$ is finite, in fact, $[T:F]\leqslant{[K:F]}$, we get that $T=F(a)$ for some ${a}\in{T}$. Then, the polynomial
-  \begin{align*}
-    p(t)
-    &=
-    \prod\left\{t-\sigma(a):{\sigma}\in{G(K,F)}\right\}
-    \\
-    &=
-    (t-a)(t-\sigma_{2}(a))\cdots(t-\sigma_{n}(a))
-    \\
-    &=
-    t^{n}-\alpha_{1}t^{n-1}+\alpha_{2}t^{n-2}+\cdots+(-1)^{n}\alpha_{n}
-  \end{align*}
-  is a polynomial in $T[t]$, where $\alpha_{1},\alpha_{2},\ldots,\alpha_{n}$ are the elementary symmetric functions in $\sigma_{1}(a)=a,\sigma_{2}(a),\ldots,\sigma_{n}(a)$. Recall that the $\sigma_{i}(a)$ must be distinct from one another because $a$ is the root of an irreducible polynomial over $F$, namely, the minimal polynomial of $a$ over $F$, and the $\sigma_{i}$ belong to $G(K,F)$. Now, $\sigma(\alpha_{i})=\alpha_{i}$ for every ${\sigma}\in{G(K,F)}$ and as such $\alpha_{i}$ belongs to $K_{G(K,F)}=F$ for every ${i}\in{\{1,\ldots,n\}}$. Thus, $p(t)$ is in reality a polynomial in $F[t]$. Finally, if $S$ is any extension of $F$ that contains a complete system of roots of $p(t)$, then it also contains $a$. As a consequence, we get that $T=F(a)\subset{S}$ and $[T:F]\leqslant{[S:F]}$. Therefore, $T=F(a)$ is the splitting field of a polynomial with coefficients in $F$.
+	Let's write $G(K,F)=\{\sigma_{1}=id,\sigma_{2},\ldots,\sigma_{n}\}$, where $n=\order{G(K,F)}=[K:F]$. Then, assume that $T$ is any extension of $F$ in $K$ such that $\sigma(T)\subset{T}$ for every ${\sigma}\in{G(K,F)}$. We want to show that $T$ is the splitting field of some polynomial with coefficients in $F$. Since $[T:F]$ is finite, in fact, $[T:F]\leqslant{[K:F]}$, we get that $T=F(a)$ for some ${a}\in{T}$. Then, the polynomial
+	\begin{align*}
+		p(t)
+		 & =
+		\prod\left\{t-\sigma(a):{\sigma}\in{G(K,F)}\right\}
+		\\
+		 & =
+		(t-a)(t-\sigma_{2}(a))\cdots(t-\sigma_{n}(a))
+		\\
+		 & =
+		t^{n}-\alpha_{1}t^{n-1}+\alpha_{2}t^{n-2}+\cdots+(-1)^{n}\alpha_{n}
+	\end{align*}
+	is a polynomial in $T[t]$, where $\alpha_{1},\alpha_{2},\ldots,\alpha_{n}$ are the elementary symmetric functions in $\sigma_{1}(a)=a,\sigma_{2}(a),\ldots,\sigma_{n}(a)$. Recall that the $\sigma_{i}(a)$ must be distinct from one another because $a$ is the root of an irreducible polynomial over $F$, namely, the minimal polynomial of $a$ over $F$, and the $\sigma_{i}$ belong to $G(K,F)$. Now, $\sigma(\alpha_{i})=\alpha_{i}$ for every ${\sigma}\in{G(K,F)}$ and as such $\alpha_{i}$ belongs to $K_{G(K,F)}=F$ for every ${i}\in{\{1,\ldots,n\}}$. Thus, $p(t)$ is in reality a polynomial in $F[t]$. Finally, if $S$ is any extension of $F$ that contains a complete system of roots of $p(t)$, then it also contains $a$. As a consequence, we get that $T=F(a)\subset{S}$ and $[T:F]\leqslant{[S:F]}$. Therefore, $T=F(a)$ is the splitting field of a polynomial with coefficients in $F$.
 
-  Conversely, suppose that $T$ is a normal extension of $F$ in $K$. We want to show that ${\sigma(T)}\subset{T}$ for every ${\sigma}\in{G(K,F)}$. Let's write $G(T,F)=\{\sigma_{1}=id,\sigma_{2},\ldots,\sigma_{m}\}$, where $m=\order{G(T,F)}=[T:F]$. Once again, we have $T=F(a)$ for some ${a}\in{T}$. Now, let
-  \begin{align*}
-    q(t)
-    &=
-    \prod\left\{t-\sigma(a):{\sigma}\in{G(T,F)}\right\}
-    \\
-    &=
-    (t-a)(t-\sigma_{2}(a))\cdots(t-\sigma_{m}(a))
-    \\
-    &=
-    t^{m}-\beta_{1}t^{m-1}+\beta_{2}t^{m-2}+\cdots+(-1)^{m}\beta_{m}
-  \end{align*}
-  where $\beta_{1},\beta_{2},\ldots,\beta_{m}$ are the elementary symmetric functions in $\sigma_{1}(a)=a,\sigma_{2}(a),\ldots,\sigma_{m}(a)$. As before, the $\sigma_{i}(a)$ are distinct from one another because $a$ is the root of an irreducible polynomial over $F$, that being the minimal polynomial of $a$ over $F$, and the $\sigma_{i}$ belong to $G(T,F)$. Here too, the equality $\sigma(\beta_{i})=\beta_{i}$ holds for every ${\sigma}\in{G(T,F)}$, which implies that the $\beta_{i}$ belong to $T_{G(T,F)}=F$ for every ${i}\in{\{1,\ldots,m\}}$. Thus, $q(t)$ is a monic polynomial in $F[t]$ of degree $m=[F(a):F]$ having $a$ as one of its roots. Therefore, $q(t)$ must be the minimal polynomial of $a$ over $F$. Finally, for any given automorphism $\sigma$ in $G(K,F)$, the element $\sigma(a)$ is again a root of $q(t)$ and as such it belongs to the set ${\{\sigma(a):{\sigma}\in{G(T,F)}\}}=\{\sigma_{1}(a)=a,\sigma_{2}(a),\ldots,\sigma_{m}(a)\}$ which is itself a subset of $T$. Since $T$ is generated by $a$ over $F$, this implies that ${\sigma(T)}\subset{T}$ for every ${\sigma}\in{G(K,F)}$.
+	Conversely, suppose that $T$ is a normal extension of $F$ in $K$. We want to show that ${\sigma(T)}\subset{T}$ for every ${\sigma}\in{G(K,F)}$. Let's write $G(T,F)=\{\sigma_{1}=id,\sigma_{2},\ldots,\sigma_{m}\}$, where $m=\order{G(T,F)}=[T:F]$. Once again, we have $T=F(a)$ for some ${a}\in{T}$. Now, let
+	\begin{align*}
+		q(t)
+		 & =
+		\prod\left\{t-\sigma(a):{\sigma}\in{G(T,F)}\right\}
+		\\
+		 & =
+		(t-a)(t-\sigma_{2}(a))\cdots(t-\sigma_{m}(a))
+		\\
+		 & =
+		t^{m}-\beta_{1}t^{m-1}+\beta_{2}t^{m-2}+\cdots+(-1)^{m}\beta_{m}
+	\end{align*}
+	where $\beta_{1},\beta_{2},\ldots,\beta_{m}$ are the elementary symmetric functions in $\sigma_{1}(a)=a,\sigma_{2}(a),\ldots,\sigma_{m}(a)$. As before, the $\sigma_{i}(a)$ are distinct from one another because $a$ is the root of an irreducible polynomial over $F$, that being the minimal polynomial of $a$ over $F$, and the $\sigma_{i}$ belong to $G(T,F)$. Here too, the equality $\sigma(\beta_{i})=\beta_{i}$ holds for every ${\sigma}\in{G(T,F)}$, which implies that the $\beta_{i}$ belong to $T_{G(T,F)}=F$ for every ${i}\in{\{1,\ldots,m\}}$. Thus, $q(t)$ is a monic polynomial in $F[t]$ of degree $m=[F(a):F]$ having $a$ as one of its roots. Therefore, $q(t)$ must be the minimal polynomial of $a$ over $F$. Finally, for any given automorphism $\sigma$ in $G(K,F)$, the element $\sigma(a)$ is again a root of $q(t)$ and as such it belongs to the set ${\{\sigma(a):{\sigma}\in{G(T,F)}\}}=\{\sigma_{1}(a)=a,\sigma_{2}(a),\ldots,\sigma_{m}(a)\}$ which is itself a subset of $T$. Since $T$ is generated by $a$ over $F$, this implies that ${\sigma(T)}\subset{T}$ for every ${\sigma}\in{G(K,F)}$.
 \end{proof}
 
 \begin{theorem}\label{thm:galois-correspondence}
@@ -127,7 +104,7 @@
 	\[
 		K_{H}=\left\{{x}\in{K}:\sigma(x)=x\text{ for every }{\sigma}\in{H}\right\}.
 	\]
-  Then, the association ${T}\mapsto{G(K,T)}$ sets up a one-to-one correspondence between the set of subfields of $K$ containing $F$ onto the set of subgroups of $G(K,F)$ in such a way that:
+	Then, the association ${T}\mapsto{G(K,T)}$ sets up a one-to-one correspondence between the set of subfields of $K$ containing $F$ onto the set of subgroups of $G(K,F)$ in such a way that:
 	\begin{enumerate}
 		\item $T=K_{G(K,T)}$
 		\item $H=G(K,K_{H})$
@@ -144,6 +121,12 @@
 These exercises might be found in~\cite{herstein_topics_2010}.
 
 \begin{problem}
+Prove directly that any automorphism of $K$ must leave every rational number
+fixed.
+\end{problem}
+
+\begin{problem}
+For each of the following statements, do what is being requested.
 \begin{enumerate}
 	\item Find the splitting field $K$ of $x^{3}-2$ over $\mathbb{Q}$;
 	\item Prove that the Galois group of $x^{3}-2$ over $\mathbb{Q}$ is
@@ -156,26 +139,21 @@ These exercises might be found in~\cite{herstein_topics_2010}.
 \end{problem}
 
 \begin{problem}
-Prove directly that any automorphism of $K$ must leave every rational number
-fixed.
-\end{problem}
-
-\begin{problem}
 If the field $F$ contains a primitive nth root of unity, prove that the
 Galois group of $x^{n}-a$ is abelian for every $F$.
 \end{problem}
 
 \begin{problem}\label{problem:13}
-  Prove each of the following assertions.
+Prove each of the following assertions.
 \begin{enumerate}
 	\item There are $\phi(n)$ primitive nth roots of unity where $\phi(n)$ is the
-        Euler $\phi$-function.
+	      Euler $\phi$-function.
 	\item If $\omega$ is a primitive nth root of unity prove that
 	      $\mathbb{Q}(\omega)$ is the splitting field of $x^{n}-1$ over
 	      $\mathbb{Q}$ (and so is a normal extension of $\mathbb{Q}$).
-  \item If $\omega_{1},\ldots,\omega_{\phi(n)}$ are the $\phi(n)$ primitive nth
-        roots of unity prove that any automorphism of $\mathbb{Q}(\omega)$
-        takes $\omega_{1}$ into some $\omega_{i}$.
+	\item If $\omega_{1},\ldots,\omega_{\phi(n)}$ are the $\phi(n)$ primitive nth
+	      roots of unity prove that any automorphism of $\mathbb{Q}(\omega)$
+	      takes $\omega_{1}$ into some $\omega_{i}$.
 	\item Prove that $[\mathbb{Q}(\omega):\mathbb{Q}]\leqslant\phi(n)$.
 \end{enumerate}
 \end{problem}
