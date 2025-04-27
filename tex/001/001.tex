@@ -1,7 +1,108 @@
-\chapter{Fist Chapter}\label{chp:fist_chapter}
+\section{The elementos of Galois theory}\label{sec:the_elementos_of_galois_theory}
 
-\section{Introduction}\label{sec:introduction}
+\begin{theorem}\label{thm:distinct-field-automorphisms-are-linearly-independent}
+	If $K$ is a field and if $\sigma_{1},\ldots,\sigma_{n}$ are distinct
+	automorphisms of $K$ then it is impossible to find in $K$ elements
+	$a_{1},\ldots,a_{n}$ not all equal to $0$ such that
+	$a_{1}\sigma(u)+\cdots+a_{n}\sigma(u)=0$ for all ${u}\in{K}$.
+\end{theorem}
 
-\[
-	\Gamma_{ij}^{k}=0
-\]
+\begin{definition}\label{def:fixed-field}
+	If $G$ is a group of automorphisms of $K$, then the fixed field of $G$ is the
+	set of all elements ${a}\in{K}$ such that $\sigma(a)=a$ for all
+	${\sigma}\in{G}$.
+\end{definition}
+
+\begin{lemma}\label{lem:the-fixed-field-is-in-fact-a-subfield}
+	The fixed field of $G$ is a subfield of $K$.
+\end{lemma}
+
+\begin{definition}\label{def:automorphism-group-relative-to-a-subfield}
+	Let $K$ be a field and let $F$ be a subfield of $K$. Then the group of
+	automorphisms of $K$ relative to $F$, written as $G(K,F)$, is the set of all
+	automorphisms of $K$ leaving every element of $F$ point wise fixed; that is,
+	the automorphism $\sigma$ of $K$ is in $G(K,F)$ if and only if
+	$\sigma(\alpha)=\alpha$ for every ${\alpha}\in{K}$.
+\end{definition}
+
+\begin{theorem}\label{thm:finite-extensions-make-a-finite-relative-automorphism-group}
+	If $K$ is a finite extension of $F$ then $G(K,F)$ is a finite group and its
+	order is not greater than $[K:F]$.
+\end{theorem}
+
+\begin{theorem}\label{thm:symmetric-rational-functions}
+	Let $F$ be a field and let $F(x_{1},\ldots,x_{n})$ be the field of rational
+	functions in $x_{1},\ldots,x_{n}$ over $F$. Let $S$ be the field of symmetric
+	rational functions. Then:
+	\begin{enumerate}
+		\item $[F(x_{1},\ldots,x_{n}):S]=n!$;
+		\item $G(F(x_{1},\ldots,x_{n}),S)=S_{n}$, the symmetric group of degree $n$;
+		\item If $a_{1},\ldots,a_{n}$ are the elementary symmetric functions in
+		      $x_{1},\ldots,x_{n}$, then $S=F(a_{1},\ldots,a_{n})$;
+		\item $F(x_{1},\ldots,x_{n})$ is the splitting field over
+		      $F(a_{1},\ldots,a_{n})=S$ of the polynomial
+		      $t^{n}-a_{1}t^{n-1}+a_{2}t^{n-2}+\cdots+(-1)^{n}a_{n}$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}\label{def:normal-extension}
+	$K$ is a normal extension of $F$ if $K$ is a finite extension of $F$ such that
+	$F$ is the fixed field of $G(K,F)$.
+\end{definition}
+
+\begin{theorem}\label{thm:on-the-subfield-subgroup-correspondence}
+	Let $K$ be a normal extension of $F$ and let $H$ be a subgroup of $G(K,F)$.
+	Let
+	\[
+		K_{H}=\left\{{x}\in{K}:\sigma(x)=x\text{ for all }{\sigma}\in{H}\right\}
+	\]
+	be the fixed field of $H$. Then:
+	\begin{enumerate}
+		\item $[K:K_{H}]=\order{H}$
+		\item $H=G(K,K_{H})$
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}\label{thm:a-characterization-of-normality}
+	$K$ is a normal extension of $F$ if and only if $K$ is the splitting field of
+	some polynomial over $F$.
+\end{theorem}
+
+\begin{lemma}\label{lem:the-action-of-the-galois-group-of-a-normal-extension-is-transitive}
+	Let $K$ be the splitting field of $f(x)$ in $F[x]$ and let $p(x)$ be an
+	irreducible factor of $f(x)$ in $F[x]$. If the roots of $p(x)$ are
+	$\alpha_{1},\ldots,\alpha_{r}$, then for each ${i}\in\{1,\ldots,r\}$ there is
+	an automorphism ${\sigma_{i}}\in{G(K,F)}$ such that
+	$\sigma_{i}(\alpha_{1})=\alpha_{i}$.
+\end{lemma}
+
+\begin{definition}\label{def:galois-group}
+	Let $f(x)$ be a polynomial in $F[x]$ and let $K$ be its splitting field over
+	$F$. The Galois group of $f(x)$ is the group $G(K,F)$ of all the automorphisms
+	of $K$ leaving every element of $F$ point wise fixed.
+\end{definition}
+
+\begin{theorem}\label{thm:galois-correspondence}
+	Let $K$ be the splitting field over $F$ of some polynomial ${f(x)}\in{F[x]}$
+	and $G(K,F)$ be its Galois group. For any subfield $T$ of $K$ containing $F$
+	let
+	\[
+		G(K,T)=\left\{{\sigma}\in{G(K,F)}:\sigma(t)=t\text{ for all }{t}\in{T}\right\}
+	\]
+	and for any subgroup $H$ of $G(K,F)$ let
+	\[
+		K_{H}=\left\{{x}\in{K}:\sigma(x)=x\text{ for every }{\sigma}\in{H}\right\}.
+	\]
+	Then the association ${T}\mapsto{G(K,T)}$ sets up a one-to-one correspondence
+	of the set of subfields of $K$ which contain $F$ onto the set of subgroups of
+	$G(K,F)$ such that:
+	\begin{enumerate}
+		\item $T=K_{G(K,T)}$
+		\item $H=G(K,K_{H})$
+		\item $[K:T]=\order{G(K,T)}$ and $[T:F]=[G(K,F):G(K,T)]$
+		\item $T$ is a normal extension of $F$ if and only if $G(K,T)$ is a normal
+		      subgroup of $G(K,F)$
+		\item When $T$ is a normal extension of $F$, then $G(T,F)$ is isomorphic to
+		      $G(K,F)/G(K,T)$.
+	\end{enumerate}
+\end{theorem}
