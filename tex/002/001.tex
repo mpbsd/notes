@@ -3,60 +3,60 @@
 \section{Banach's Fixed Point Theorem}\label{sec:banach_s_fixed_point_theorem}
 
 \begin{theorem}\label{thm:banach's fixed point theorem}
-  Let \(T:{M}\to{M}\) be a contraction on a complete metric space \((M,d)\), with contraction constant \({c}\in{\rinterval{0}{1}}\). Then, \(T\) has a unique fixed point \({p}\in{M}\). More over, if \(x_{0}\) is any point in \(M\), then \[p=\lim_{k\to\infty}T^{k}(x_{0}),\] where \(T^{1}=T\) and \(T^{k+1}=T\circ{T^{k}}\) for every \({k}\in{\mathbb{N}}\).
+	Let \(T:{M}\to{M}\) be a contraction on a complete metric space \((M,d)\), with contraction constant \({c}\in{\rinterval{0}{1}}\). Then, \(T\) has a unique fixed point \({p}\in{M}\). More over, if \(x_{0}\) is any point in \(M\), then \[p=\lim_{k\to\infty}T^{k}(x_{0}),\] where \(T^{1}=T\) and \(T^{k+1}=T\circ{T^{k}}\) for every \({k}\in{\mathbb{N}}\).
 \end{theorem}
 
 \begin{proof}
-  If \(x\) and \(y\) are arbitrary points in \(M\), then
-  \[
-    d(x,y)
-    \leqslant
-    d(x,T(x)) + d(T(x),T(y)) + d(T(y),y)
-    \leqslant
-    d(x,T(x)) + cd(x,y) + d(y,T(y)),
-  \]
-  from what it follows that
-  \begin{equation}\label{eq:main-inequality}
-    d(x,y)
-    \leqslant
-    \frac{d(x,T(x)) + d(y,T(y))}{1 - c}.
-  \end{equation}
-  Inequality~\eqref{eq:main-inequality} implies that \(T\) has at most one fixed point. Now, let \(x_{0}\) be an arbitrarily fixed point in \(M\). Then, for every \(k\) and \(l\) in \(\mathbb{N}\), we get that
-  \[
-    \begin{array}{rcl}
-      d(T^{k}(x_{0}),T^{l}(x_{0}))
-      &\leqslant&
-      d(T^{k}(x_{0}),T^{k+1}(x_{0}))
-      +
-      d(T^{k+1}(x_{0}),T^{l+1}(x_{0}))
-      +
-      d(T^{l}(x_{0}),T^{l+1}(x_{0}))
-      \\
-      &\leqslant&
-      c^{k}d(x_{0},T(x_{0}))
-      +
-      cd(T^{k}(x_{0}),T^{l}(x_{0}))
-      +
-      c^{l}d(x_{0},T(x_{0}))
-    \end{array}
-  \]
-  which implies that
-  \begin{equation}\label{eq:the-sequence-of-iterates-is-cauchy}
-    d(T^{k}(x_{0}),T^{l}(x_{0}))
-    \leqslant
-    (c^{k}+c^{l})\frac{d(x_{0},T(x_{0}))}{1-c},
-  \end{equation}
-  showing that \(\left(T^{k}(x_{0})\right)_{{k}\in{\mathbb{N}}}\) is a Cauchy sequence in \(M\). Since \(M\) is a complete metric space, there exists \(\lim{T^{k}(x_{0})}=p\in{M}\). Finally, notice that
-  \[
-    T(p)=T(\lim{T^{k}(x_{0})})=\lim{T^{k+1}(x_{0})}=p,
-  \]
-  by the continuity of \(T\). This concludes the proof.
+	If \(x\) and \(y\) are arbitrary points in \(M\), then
+	\[
+		d(x,y)
+		\leqslant
+		d(x,T(x)) + d(T(x),T(y)) + d(T(y),y)
+		\leqslant
+		d(x,T(x)) + cd(x,y) + d(y,T(y)),
+	\]
+	from what it follows that
+	\begin{equation}\label{eq:main-inequality}
+		d(x,y)
+		\leqslant
+		\frac{d(x,T(x)) + d(y,T(y))}{1 - c}.
+	\end{equation}
+	Inequality~\eqref{eq:main-inequality} implies that \(T\) has at most one fixed point. Now, let \(x_{0}\) be an arbitrarily fixed point in \(M\). Then, for every \(k\) and \(l\) in \(\mathbb{N}\), we get that
+	\[
+		\begin{array}{rcl}
+			d(T^{k}(x_{0}),T^{l}(x_{0}))
+			 & \leqslant &
+			d(T^{k}(x_{0}),T^{k+1}(x_{0}))
+			+
+			d(T^{k+1}(x_{0}),T^{l+1}(x_{0}))
+			+
+			d(T^{l}(x_{0}),T^{l+1}(x_{0}))
+			\\
+			 & \leqslant &
+			c^{k}d(x_{0},T(x_{0}))
+			+
+			cd(T^{k}(x_{0}),T^{l}(x_{0}))
+			+
+			c^{l}d(x_{0},T(x_{0}))
+		\end{array}
+	\]
+	which implies that
+	\begin{equation}\label{eq:the-sequence-of-iterates-is-cauchy}
+		d(T^{k}(x_{0}),T^{l}(x_{0}))
+		\leqslant
+		(c^{k}+c^{l})\frac{d(x_{0},T(x_{0}))}{1-c},
+	\end{equation}
+	showing that \(\left(T^{k}(x_{0})\right)_{{k}\in{\mathbb{N}}}\) is a Cauchy sequence in \(M\). Since \(M\) is a complete metric space, there exists \(\lim{T^{k}(x_{0})}=p\in{M}\). Finally, notice that
+	\[
+		T(p)=T(\lim{T^{k}(x_{0})})=\lim{T^{k+1}(x_{0})}=p,
+	\]
+	by the continuity of \(T\). This concludes the proof.
 \end{proof}
 
 \section{The Mean Value Theorem}\label{sec:the_mean_value_theorem}
 
 \begin{theorem}\label{thm:the-mean-value-theorem}
-  \LaTeX{} rules!
+	\LaTeX{} rules!
 \end{theorem}
 
 \section{The Inverse Function Theorem}\label{sec:the_inverse_function_theorem}
@@ -64,95 +64,125 @@
 This proof of the Inverse Function Theorem can be found in~\cite{lang2012real}.
 
 \begin{theorem}\label{thm:the-inverse-function-theorem}
-  Let \(f:U\to\mathbb{R}^{n}\) be a \(C^{1}\) function on an open set \({U}\subset{\mathbb{R}^{n}}\). If, for some point \({a}\in{U}\), \(df(a):\mathbb{R}^{n}\to\mathbb{R}^{n}\) is an \(\mathbb{R}\)-linear isomorphism, then there exist open sets \(U_{0}\) and \(V_{0}\) in \(\mathbb{R}^{n}\), with \({a}\in{U_{0}}\subset{U}\) and \({f(a)}\in{V_{0}}\), such that \(f:U_{0}\to{V_{0}}\) is a diffeomorphism of class \(C^{1}\). More over, we have that
-  \[
-    df^{-1}(y)=[df(x)]^{-1},
-  \]
-  for every \(y\) in \(V_{0}\), where \(x=f^{-1}(y)\).
+	Let \(f:U\to\mathbb{R}^{n}\) be a \(C^{1}\) function on an open set \({U}\subset{\mathbb{R}^{n}}\). If, for some point \({a}\in{U}\), \(df(a):\mathbb{R}^{n}\to\mathbb{R}^{n}\) is an \(\mathbb{R}\)-linear isomorphism, then there exist open sets \(U_{0}\) and \(V_{0}\) in \(\mathbb{R}^{n}\), with \({a}\in{U_{0}}\subset{U}\) and \({f(a)}\in{V_{0}}\), such that \(f:U_{0}\to{V_{0}}\) is a diffeomorphism of class \(C^{1}\). More over, we have that
+	\[
+		df^{-1}(y)=[df(x)]^{-1},
+	\]
+	for every \(y\) in \(V_{0}\), where \(x=f^{-1}(y)\).
 \end{theorem}
 
 \begin{proof}
-  The first thing to notice is that we can assume that \({a=0}\), \(f(a)=0\) and \(df(a)=\text{id}_{\mathbb{R}^{n}}\). To see this, let \(t_{v}\) be, for any given \({v}\in{\mathbb{R}^{n}}\), the translation by \(v\):
-  \[
-    t_{v}:\mathbb{R}^{n}\to\mathbb{R}^{n},\quad{{x}\mapsto{x+v}}.
-  \]
-  Then, \(t_{v}\) is differentiable at every point \({x}\in{\mathbb{R}^{n}}\) and \(dt_{v}(x)=\text{id}_{\mathbb{R}^{n}}\). It's also an invertible function, with \(t_{v}^{-1}=t_{-v}\) for every \({v}\in{\mathbb{R}^{n}}\). Also, let \(\lambda\) be the \(\mathbb{R}\)-linear isomorphism \(df(a):\mathbb{R}^{n}\to\mathbb{R}^{n}\). Then,
-  \[
-    t_{a}^{-1}(U)=\left\{{x}\in{\mathbb{R}^{n}}:{x+a}\in{U}\right\},
-  \]
-  is open in \(\mathbb{R}^{n}\) and contains the null vector, and the function
-  \[
-    \lambda^{-1}\circ{t_{f(a)}^{-1}}\circ{f}\circ{t_{a}}:t_{a}^{-1}(U)\to\mathbb{R}^{n},\quad{{x}\mapsto{\lambda^{-1}(f(x+a)-f(a))}},
-  \]
-  satisfies:
-  \begin{enumerate}
-    \item
-      \(f\) is invertible if, and only if, \(\lambda^{-1}\circ{t_{f(a)}^{-1}}\circ{f}\circ{t_{a}}\) is invertible;
-    \item
-      \(\lambda^{-1}\circ{t_{f(a)}^{-1}}\circ{f}\circ{t_{a}}(0)=\lambda^{-1}\left(f(0+a)-f(a)\right)=0\);
-    \item
-      \(d\left(\lambda^{-1}\circ{t_{f(a)}^{-1}}\circ{f}\circ{t_{a}}\right)(0)=\lambda^{-1}df(a)=\text{id}_{\mathbb{R}^{n}}\).
-  \end{enumerate}
-  Thus, from now on we assume that \(a=0\), \(f(a)=0\) and \(df(0)=\text{id}_{\mathbb{R}^{n}}\). Now, let \(g:{U}\to{\mathbb{R}^{n}}\) be given by \(g(x)=x-f(x)\) for every \({x}\in{U}\). It's also a differentiable function of class \(C^{1}\), with \(g(0)=0\) and \(dg(0)=0\). Thus, by the continuity of \(dg\), there exists \(r>0\) such that \({B[0,r]}\subset{U}\) and \(\norm{dg(x)}\leqslant{\frac{1}{2}}\) for every \({x}\in{B[0,r]}\). By the Mean Value Theorem, we have that \(\norm{g(x_{1})-g(x_{2})}\leqslant{\frac{1}{2}\norm{x_{1}-x_{2}}}\) for every pair of points \(x_{1},x_{2}\) in \(B[0,r]\). Then, for every \({y}\in{B[0,r/2]}\), let \(g_{y}:B[0,r]\to\mathbb{R}^{n}\) be given by \(g_{y}(x)=y+g(x)\) for every \({x}\in{\mathbb{R}^{n}}\). Notice that:
-  \[
-    \norm{g_{y}(x)}
-    \leqslant
-    \norm{y}+\norm{g(x)}
-    \leqslant
-    \frac{r}{2}+\frac{\norm{x}}{2}
-    \leqslant
-    r,
-  \]
-  for every \({x}\in{B[0,r]}\)
-  \[
-    \norm{g_{y}(x_{1})-g_{y}(x_{2})}
-    =
-    \norm{g(x_{1})-g(x_{2})}
-    \leqslant
-    \frac{1}{2}\norm{x_{1}-x_{2}}
-  \]
-  Thus, \(g_{y}:{B[0,r]}\to{B[0,r]}\) is a contraction for every \({y}\in{B[0,r/2]}\). Therefore, there exists a unique \({x}\in{B[0,r]}\) that is fixed by \(g_{y}\):
-  \[
-    g_{y}(x)=x
-    \iff
-    y + x - f(x) = x
-    \iff
-    y = f(x)
-  \]
-  \[
-    f^{-1}:{B[0,r/2]}\to{B[0,r]}
-  \]
-  \[
-    \begin{array}{rcl}
-      \norm{x_{1}-x_{2}}
-      &\leqslant&
-      \norm{x_{1}+f(x_{1}) - (x_{2}+f(x_{2}))}
-      +
-      \norm{-f(x_{1})+f(x_{2})}
-      \\
-      &\leqslant&
-      \frac{1}{2}\norm{x_{1}-x_{2}}
-      +
-      \norm{y_{1}-y_{2}}
-    \end{array}
-  \]
-  from what it follows that \(\norm{x_{1}-x_{2}}\leqslant{2\norm{y_{1}-y_{2}}}\), which proves that \(f^{-1}\) is also continuous.
-  Notice that, if \({y}\in{B(0,r/2)}\), then \({x=f^{-1}(y)}\in{B(0,r)}\) because \(f(0)=0\) and
-  \[
-    \norm{x}\leqslant{2\norm{y}}<r
-  \]
-  For any \(y\) and \(y_{1}\) in \(B(0,r/2)\), let \(x\) and \(x_{1}\) be those points in \(B(0,r)\) such that \(f(x)=y\) and \(f(x_{1})=y_{1}\), and
-  \[
-    \begin{array}{rcl}
-      \norm{f^{-1}(y)-f^{-1}(y_{1})-[df(x_{1})]^{-1}(y-y_{1})}
-      &\leqslant&
-      \norm{x-x_{1}}
-      +
-      \norm{[df(x_{1})]^{-1}}\norm{y-y_{1}}
-      \\
-      &\leqslant&
-      (2+[df(x_{1})]^{-1})\norm{y-y_{1}}
-    \end{array}
-  \]
-  Thus, \(f^{-1}\) is differentiable at \(y_{1}\) and \(df^{-1}(y_{1})=[df(x_{1})]^{-1}\)
+	The first thing to notice is that we can assume that \({a=0}\), \(f(a)=0\) and \(df(a)=\text{id}_{\mathbb{R}^{n}}\). To see this, let \(t_{v}\) be, for any given \({v}\in{\mathbb{R}^{n}}\), the translation by \(v\):
+	\[
+		t_{v}:\mathbb{R}^{n}\to\mathbb{R}^{n},\quad{{x}\mapsto{x+v}}.
+	\]
+	Then, \(t_{v}\) is differentiable at every point \({x}\in{\mathbb{R}^{n}}\)
+	and \(dt_{v}(x)=\text{id}_{\mathbb{R}^{n}}\). It's also an invertible
+	function, with \(t_{v}^{-1}=t_{-v}\) for every \({v}\in{\mathbb{R}^{n}}\).
+	Also, let \(\lambda\) be the \(\mathbb{R}\)-linear isomorphism
+	\(df(a):\mathbb{R}^{n}\to\mathbb{R}^{n}\). Then,
+	\(t_{a}^{-1}(U)=\left\{{x}\in{\mathbb{R}^{n}}:{x+a}\in{U}\right\}\) is an open
+	set in \(\mathbb{R}^{n}\) which contains the null vector and the function:
+	\[
+		\lambda^{-1}\circ{t_{f(a)}^{-1}}\circ{f}\circ{t_{a}}:t_{a}^{-1}(U)\to\mathbb{R}^{n},\quad{{x}\mapsto{\lambda^{-1}(f(x+a)-f(a))}},
+	\]
+	satisfies:
+	\begin{enumerate}[a.]
+		\item
+		      \(\lambda^{-1}\circ{t_{f(a)}^{-1}}\circ{f}\circ{t_{a}}(0)=\lambda^{-1}\left(f(a)-f(a)\right)=0\);
+		\item
+		      \(d(\lambda^{-1}\circ{t_{f(a)}^{-1}}\circ{f}\circ{t_{a}})(0)=\lambda^{-1}df(a)=\text{id}_{\mathbb{R}^{n}}\);
+		\item
+		      \(\lambda^{-1}\circ{t_{f(a)}^{-1}}\circ{f}\circ{t_{a}}\) is
+		      invertible if, and only if, \(f\) is invertible.
+	\end{enumerate}
+	Thus, from now on we assume that \(a=0\), \(f(a)=0\) and
+	\(df(0)=\text{id}_{\mathbb{R}^{n}}\). Now, let \(g:{U}\to{\mathbb{R}^{n}}\) be
+	given by \(g(x)=x-f(x)\) for every \({x}\in{U}\). It's also a differentiable
+	function of class \(C^{1}\), with \(g(0)=0\) and \(dg(0)=0\). By the
+	continuity of \(dg\), there exists \(r>0\) such that \({B[0,r]}\subset{U}\),
+	\(\norm{dg(x)}\leqslant{\frac{1}{2}}\) and \(\det{df(x)}>0\), for every
+	\({x}\in{B[0,r]}\). It then follows that
+	\(\norm{g(x_{1})-g(x_{2})}\leqslant{\frac{1}{2}\norm{x_{1}-x_{2}}}\) for every
+	pair of points \(x_{1}\) and \(x_{2}\) in \(B[0,r]\), by the Mean Value
+	Theorem. Hence, for every \({y}\in{B[0,r/2]}\), the function
+	\(g_{y}:B[0,r]\to\mathbb{R}^{n}\), \({x}\mapsto{y+g(x)}\), has the following
+	properties:
+	\begin{enumerate}
+		\item
+		      It's range is contained in the closed ball \(B[0,r]\):
+		      \[
+			      \forall\,{x}\in{B[0,r]}:\quad
+			      \norm{g_{y}(x)}
+			      \leqslant
+			      \norm{y}+\norm{g(x)}
+			      \leqslant
+			      \frac{r}{2}+\frac{\norm{x}}{2}
+			      \leqslant
+			      r,
+		      \]
+		\item
+		      It's a contraction \(g_{y}:{B[0,r]}\to{B[0,r]}\), with contraction
+		      constant \(\frac{1}{2}\):
+		      \[
+			      \forall\,{x_{1},x_{2}}\in{B[0,r]}:\quad
+			      \norm{g_{y}(x_{1})-g_{y}(x_{2})}
+			      =
+			      \norm{g(x_{1})-g(x_{2})}
+			      \leqslant
+			      \frac{1}{2}\norm{x_{1}-x_{2}}.
+		      \]
+	\end{enumerate}
+	Therefore, for each \({y}\in{B[0,r/2]}\), there is a unique
+	\({x}\in{B[0,r]}\) fixed by \(g_{y}\):
+	\[
+		g_{y}(x)=x
+		\iff
+		y + x - f(x) = x
+		\iff
+		y = f(x).
+	\]
+	This proves that \(f:{B[0,r]}\to{B[0,r/2]}\) is one to one and also onto. The
+	inverse function \(f^{-1}:{B[0,r/2]}\to{B[0,r]}\) is also continuous, because:
+	\[
+		\begin{array}{rcl}
+			\norm{x_{1}-x_{2}}
+			 & \leqslant &
+			\norm{x_{1}-f(x_{1}) - (x_{2}-f(x_{2}))}
+			+
+			\norm{f(x_{1})-f(x_{2})}
+			\\
+			 & \leqslant &
+			\frac{1}{2}\norm{x_{1}-x_{2}}
+			+
+			\norm{y_{1}-y_{2}},
+		\end{array}
+	\]
+	from what we get that
+	\[
+		\norm{x_{1}-x_{2}}\leqslant{2\norm{y_{1}-y_{2}}},
+	\]
+	for every \(y_{1}\) and \(y_{2}\) in \(B[0,r/2]\), where
+	\(x_{1}=f^{-1}(y_{1})\) and \(x_{2}=f^{-1}(y_{2})\). To see that \(f^{-1}\) is
+	differentiable at any point in \(B(0,r/2)\), notice that:
+	\[
+		\begin{array}{rcl}
+			\norm{f^{-1}(y)-f^{-1}(y_{1})-[df(x_{1})]^{-1}(y-y_{1})}
+			 & \leqslant &
+			\norm{x-x_{1}}
+			+
+			\norm{[df(x_{1})]^{-1}}\norm{y-y_{1}}
+			\\
+			 & \leqslant &
+			(2+\norm{[df(x_{1})]^{-1}})\norm{y-y_{1}},
+		\end{array}
+	\]
+	for any \(y\) and \(y_{1}\) in \(B(0,r/2)\), where \(x=f^{-1}(y)\) and
+	\(x_{1}=f^{-1}(y_{1})\), which shows that \(df^{-1}(y_{1})=[df(x_{1})]^{-1}\).
+	The continuity of the differential map \({y}\mapsto{df^{-1}(y)}\) then follows
+	from the continuity of the function:
+	\[
+		{GL(n,\mathbb{R})}\to{GL(n,\mathbb{R})},\quad{{X}\mapsto{X^{-1}}}.
+	\]
+	This finishes the proof.
 \end{proof}
