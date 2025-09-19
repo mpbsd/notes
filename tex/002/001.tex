@@ -61,12 +61,14 @@
 
 \section{The Inverse Function Theorem}\label{sec:the_inverse_function_theorem}
 
+This proof of the Inverse Function Theorem can be found in~\cite{lang2012real}.
+
 \begin{theorem}\label{thm:the-inverse-function-theorem}
-  Let \(f:U\to\mathbb{R}^{n}\) be a \(C^{1}\) function on an open set \({U}\subset{\mathbb{R}^{n}}\). If, for some point \({a}\in{U}\), \(df(a):\mathbb{R}^{n}\to\mathbb{R}^{n}\) is an \(\mathbb{R}\)-linear isomorphism, then there exist open sets \(U_{0}\) and \(V\) in \(\mathbb{R}^{n}\), with \({a}\in{U_{0}}\subset{U}\) and \({f(a)}\in{V}\), such that \(f:U_{0}\to{V}\) is a diffeomorphism of class \(C^{1}\). More over, we have that
+  Let \(f:U\to\mathbb{R}^{n}\) be a \(C^{1}\) function on an open set \({U}\subset{\mathbb{R}^{n}}\). If, for some point \({a}\in{U}\), \(df(a):\mathbb{R}^{n}\to\mathbb{R}^{n}\) is an \(\mathbb{R}\)-linear isomorphism, then there exist open sets \(U_{0}\) and \(V_{0}\) in \(\mathbb{R}^{n}\), with \({a}\in{U_{0}}\subset{U}\) and \({f(a)}\in{V_{0}}\), such that \(f:U_{0}\to{V_{0}}\) is a diffeomorphism of class \(C^{1}\). More over, we have that
   \[
     df^{-1}(y)=[df(x)]^{-1},
   \]
-  for every \(y\) in \(V\), where \(x=f^{-1}(y)\).
+  for every \(y\) in \(V_{0}\), where \(x=f^{-1}(y)\).
 \end{theorem}
 
 \begin{proof}
@@ -74,7 +76,7 @@
   \[
     t_{v}:\mathbb{R}^{n}\to\mathbb{R}^{n},\quad{{x}\mapsto{x+v}}.
   \]
-  Then, \(t_{v}\) is differentiable at every point \({x}\in{\mathbb{R}^{n}}\) and \(dt_{v}(x)=\text{id}_{\mathbb{R}^{n}}\). It's also an invertible function, with \(t_{v}^{-1}=t_{-v}\), for every \({x}\in{\mathbb{R}^{n}}\). Also, let \(\lambda\) be the \(\mathbb{R}\)-linear isomorphism \(df(a):\mathbb{R}^{n}\to\mathbb{R}^{n}\). Then,
+  Then, \(t_{v}\) is differentiable at every point \({x}\in{\mathbb{R}^{n}}\) and \(dt_{v}(x)=\text{id}_{\mathbb{R}^{n}}\). It's also an invertible function, with \(t_{v}^{-1}=t_{-v}\) for every \({v}\in{\mathbb{R}^{n}}\). Also, let \(\lambda\) be the \(\mathbb{R}\)-linear isomorphism \(df(a):\mathbb{R}^{n}\to\mathbb{R}^{n}\). Then,
   \[
     t_{a}^{-1}(U)=\left\{{x}\in{\mathbb{R}^{n}}:{x+a}\in{U}\right\},
   \]
