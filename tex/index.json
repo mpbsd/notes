@@ -9,5 +9,16 @@
     "semester": "2025/1",
     "room": "",
     "routine": "35T34"
+  },
+  "002": {
+    "code": "MAT0009",
+    "discipline": "Geometria Diferencial",
+    "class": "A",
+    "workload": "64H",
+    "course": "Mestrado em Matemática",
+    "department": "IME",
+    "semester": "2025/2",
+    "room": "",
+    "routine": "46M23"
   }
 }
