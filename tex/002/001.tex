@@ -3,7 +3,11 @@
 \section{Banach's Fixed Point Theorem}\label{sec:banach_s_fixed_point_theorem}
 
 \begin{theorem}\label{thm:banach's fixed point theorem}
-	Let \(T:{M}\to{M}\) be a contraction on a complete metric space \((M,d)\), with contraction constant \({c}\in{\rinterval{0}{1}}\). Then, \(T\) has a unique fixed point \({p}\in{M}\). More over, if \(x_{0}\) is any point in \(M\), then \[p=\lim_{k\to\infty}T^{k}(x_{0}),\] where \(T^{1}=T\) and \(T^{k+1}=T\circ{T^{k}}\) for every \({k}\in{\mathbb{N}}\).
+	Let \(T:{M}\to{M}\) be a contraction on a complete metric space \((M,d)\),
+	with contraction constant \({c}\in{\rinterval{0}{1}}\). Then, \(T\) has a
+	unique fixed point \({p}\in{M}\). More over, if \(x_{0}\) is any point in
+	\(M\), then \[p=\lim_{k\to\infty}T^{k}(x_{0}),\] where \(T^{1}=T\) and
+	\(T^{k+1}=T\circ{T^{k}}\) for every \({k}\in{\mathbb{N}}\).
 \end{theorem}
 
 \begin{proof}
@@ -21,7 +25,9 @@
 		\leqslant
 		\frac{d(x,T(x)) + d(y,T(y))}{1 - c}.
 	\end{equation}
-	Inequality~\eqref{eq:main-inequality} implies that \(T\) has at most one fixed point. Now, let \(x_{0}\) be an arbitrarily fixed point in \(M\). Then, for every \(k\) and \(l\) in \(\mathbb{N}\), we get that
+  Inequality~\eqref{eq:main-inequality} implies that \(T\) has at most one
+  fixed point. Now, let \(x_{0}\) be an arbitrarily chosen point in \(M\).
+  Then, for every \(k\) and \(l\) in \(\mathbb{N}\), we get that
 	\[
 		\begin{array}{rcl}
 			d(T^{k}(x_{0}),T^{l}(x_{0}))
@@ -46,7 +52,9 @@
 		\leqslant
 		(c^{k}+c^{l})\frac{d(x_{0},T(x_{0}))}{1-c},
 	\end{equation}
-	showing that \(\left(T^{k}(x_{0})\right)_{{k}\in{\mathbb{N}}}\) is a Cauchy sequence in \(M\). Since \(M\) is a complete metric space, there exists \(\lim{T^{k}(x_{0})}=p\in{M}\). Finally, notice that
+	showing that \(\left(T^{k}(x_{0})\right)_{{k}\in{\mathbb{N}}}\) is a Cauchy
+	sequence in \(M\). Since \(M\) is a complete metric space, there exists
+	\(\lim{T^{k}(x_{0})}=p\in{M}\). Finally, notice that
 	\[
 		T(p)=T(\lim{T^{k}(x_{0})})=\lim{T^{k+1}(x_{0})}=p,
 	\]
@@ -56,15 +64,95 @@
 \section{The Mean Value Theorem}\label{sec:the_mean_value_theorem}
 
 \begin{theorem}\label{thm:the-mean-value-theorem}
-	\LaTeX{} rules!
+	Let \(f:{U}\to{\mathbb{R}^{n}}\) be a differentiable function on some open and
+	convex set \({U}\subset{\mathbb{R}^{m}}\). If there exists some constant
+	\(M>0\) such that \(\norm{df(x)}\leqslant{M}\) for every \({x}\in{U}\), then:
+	\[
+		{\norm{f(x)-f(y)}}\leqslant{M\norm{x-y}},
+	\]
+	for every pair of points \(x\) and \(y\) in \(U\).
 \end{theorem}
+
+\begin{proof}
+  Let \(x\) and \(y\) be any pair of distinct points in \(U\). Then, the line
+  segment from \(x\) to \(y\) is contained in \(U\), that is,
+  \(y_{t}=x+t(y-x)\) belongs to \(U\) for every \({t}\in{\interval{0}{1}}\).
+  Now, consider the set
+  \[
+    A
+    =
+    \left\{
+      {t}\in{\interval{0}{1}}
+      :
+      {\norm{f(y_{t})-f(x)}}\leqslant{Mt\norm{y-x}}
+    \right\}
+    .
+  \]
+  We want to show that \(A=\interval{0}{1}\). It's not an empty set because
+  \(0\) is clearly in \(A\). To see that it's closed, take any element in its
+  closure, say,
+  \({t}\in{\overline{A}}\subseteq{\overline{\interval{0}{1}}}=\interval{0}{1}\).
+  Now, for any sequence of points \({t_{k}}\in{A}\) such that
+  \(\lim{t_{k}}=t\), we get that:
+  \[
+    \begin{array}{rcl}
+      \norm{f(y_{t})-f(x)}
+      &=&
+      \norm{f(\lim{y_{t_{k}}})-f(x)}
+      \\
+      &=&
+      \lim{\norm{f(y_{t_{k}})-f(x)}}
+      \\
+      &\leqslant&
+      \lim{Mt_{k}\norm{y-x}}=Mt\norm{y-x},
+    \end{array}
+  \]
+  showing that \(t\) is also in \(A\). Thus, \(c=\sup{A}\) belongs to \(A\). We
+  claim that \(c\) equals \(1\). In fact, let's suppose that it doesn't. Since
+  \(f\) is differentiable at \(y_{c}\) we know that, for any given
+  \(\varepsilon>0\), there is some \({\delta}\in{\ointerval{0}{\norm{x-y}}}\)
+  such that \({B(y_{c},\delta)}\subseteq{U}\) and also:
+  \[
+    \norm{f(z)-f(y_{c})-df(y_{c})(z-y_{c})}
+    \leqslant
+    \varepsilon\norm{z-y_{c}},
+  \]
+  whenever \({z}\in{B(y,\delta)}\). Now, for any
+  \({r}\in{\ointerval{\max\{c,1-\delta/\norm{x-y}\}}{1}}\) we get that
+  \[
+    \norm{x_{r}-y}=(1-r)\norm{x-y}<\delta,
+  \]
+  and then, that
+  \[
+    \begin{array}{rcl}
+      \norm{f(x_{r})-f(y)}
+      &\leqslant&
+      \norm{f(x_{r})-f(y)-df(y)(x_{r}-y)}+\norm{df(y)}\norm{(x_{r}-y)}
+      \\
+      &\leqslant&
+      (\varepsilon+M)\norm{x_{r}-y}
+      \\
+      &\leqslant&
+      (\varepsilon+M)(1-r)\norm{x-y}
+      \leqslant
+      (\varepsilon+M)\norm{x-y}
+    \end{array}
+  \]
+  Then, \(c<1\) and just like that we can find some \(\delta>0\) such that \(c+\delta<1\).
+\end{proof}
 
 \section{The Inverse Function Theorem}\label{sec:the_inverse_function_theorem}
 
 This proof of the Inverse Function Theorem can be found in~\cite{lang2012real}.
 
 \begin{theorem}\label{thm:the-inverse-function-theorem}
-	Let \(f:U\to\mathbb{R}^{n}\) be a \(C^{1}\) function on an open set \({U}\subset{\mathbb{R}^{n}}\). If, for some point \({a}\in{U}\), \(df(a):\mathbb{R}^{n}\to\mathbb{R}^{n}\) is an \(\mathbb{R}\)-linear isomorphism, then there exist open sets \(U_{0}\) and \(V_{0}\) in \(\mathbb{R}^{n}\), with \({a}\in{U_{0}}\subset{U}\) and \({f(a)}\in{V_{0}}\), such that \(f:U_{0}\to{V_{0}}\) is a diffeomorphism of class \(C^{1}\). More over, we have that
+	Let \(f:U\to\mathbb{R}^{n}\) be a \(C^{1}\) function on an open set
+	\({U}\subset{\mathbb{R}^{n}}\). If, for some point \({a}\in{U}\),
+	\(df(a):\mathbb{R}^{n}\to\mathbb{R}^{n}\) is an \(\mathbb{R}\)-linear
+	isomorphism, then there exist open sets \(U_{0}\) and \(V_{0}\) in
+	\(\mathbb{R}^{n}\), with \({a}\in{U_{0}}\subset{U}\) and \({f(a)}\in{V_{0}}\),
+	such that \(f:U_{0}\to{V_{0}}\) is a diffeomorphism of class \(C^{1}\). More
+	over, we have that
 	\[
 		df^{-1}(y)=[df(x)]^{-1},
 	\]
@@ -72,7 +160,9 @@ This proof of the Inverse Function Theorem can be found in~\cite{lang2012real}.
 \end{theorem}
 
 \begin{proof}
-	The first thing to notice is that we can assume that \({a=0}\), \(f(a)=0\) and \(df(a)=\text{id}_{\mathbb{R}^{n}}\). To see this, let \(t_{v}\) be, for any given \({v}\in{\mathbb{R}^{n}}\), the translation by \(v\):
+	The first thing to notice is that we can assume that \({a=0}\), \(f(a)=0\) and
+	\(df(a)=\text{id}_{\mathbb{R}^{n}}\). To see this, let \(t_{v}\) be, for any
+	given \({v}\in{\mathbb{R}^{n}}\), the translation by \(v\):
 	\[
 		t_{v}:\mathbb{R}^{n}\to\mathbb{R}^{n},\quad{{x}\mapsto{x+v}}.
 	\]
