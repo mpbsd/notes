@@ -25,9 +25,9 @@
 		\leqslant
 		\frac{d(x,T(x)) + d(y,T(y))}{1 - c}.
 	\end{equation}
-  Inequality~\eqref{eq:main-inequality} implies that \(T\) has at most one
-  fixed point. Now, let \(x_{0}\) be an arbitrarily chosen point in \(M\).
-  Then, for every \(k\) and \(l\) in \(\mathbb{N}\), we get that
+	Inequality~\eqref{eq:main-inequality} implies that \(T\) has at most one
+	fixed point. Now, let \(x_{0}\) be an arbitrarily chosen point in \(M\).
+	Then, for every \(k\) and \(l\) in \(\mathbb{N}\), we get that
 	\[
 		\begin{array}{rcl}
 			d(T^{k}(x_{0}),T^{l}(x_{0}))
@@ -61,9 +61,9 @@
 	by the continuity of \(T\). This concludes the proof.
 \end{proof}
 
-\section{The Mean Value Theorem}\label{sec:the_mean_value_theorem}
+\section{The Mean Value Inequality}\label{sec:the_mean_value_inequality}
 
-\begin{theorem}\label{thm:the-mean-value-theorem}
+\begin{theorem}\label{thm:the-mean-value-inequality}
 	Let \(f:{U}\to{\mathbb{R}^{n}}\) be a differentiable function on some open and
 	convex set \({U}\subset{\mathbb{R}^{m}}\). If there exists some constant
 	\(M>0\) such that \(\norm{df(x)}\leqslant{M}\) for every \({x}\in{U}\), then:
@@ -74,71 +74,80 @@
 \end{theorem}
 
 \begin{proof}
-  Let \(x\) and \(y\) be any pair of distinct points in \(U\). Then, the line
-  segment from \(x\) to \(y\) is contained in \(U\), that is,
-  \(y_{t}=x+t(y-x)\) belongs to \(U\) for every \({t}\in{\interval{0}{1}}\).
-  Now, consider the set
-  \[
-    A
-    =
-    \left\{
-      {t}\in{\interval{0}{1}}
-      :
-      {\norm{f(y_{t})-f(x)}}\leqslant{Mt\norm{y-x}}
-    \right\}
-    .
-  \]
-  We want to show that \(A=\interval{0}{1}\). It's not an empty set because
-  \(0\) is clearly in \(A\). To see that it's closed, take any element in its
-  closure, say,
-  \({t}\in{\overline{A}}\subseteq{\overline{\interval{0}{1}}}=\interval{0}{1}\).
-  Now, for any sequence of points \({t_{k}}\in{A}\) such that
-  \(\lim{t_{k}}=t\), we get that:
-  \[
-    \begin{array}{rcl}
-      \norm{f(y_{t})-f(x)}
-      &=&
-      \norm{f(\lim{y_{t_{k}}})-f(x)}
-      \\
-      &=&
-      \lim{\norm{f(y_{t_{k}})-f(x)}}
-      \\
-      &\leqslant&
-      \lim{Mt_{k}\norm{y-x}}=Mt\norm{y-x},
-    \end{array}
-  \]
-  showing that \(t\) is also in \(A\). Thus, \(c=\sup{A}\) belongs to \(A\). We
-  claim that \(c\) equals \(1\). In fact, let's suppose that it doesn't. Since
-  \(f\) is differentiable at \(y_{c}\) we know that, for any given
-  \(\varepsilon>0\), there is some \({\delta}\in{\ointerval{0}{\norm{x-y}}}\)
-  such that \({B(y_{c},\delta)}\subseteq{U}\) and also:
-  \[
-    \norm{f(z)-f(y_{c})-df(y_{c})(z-y_{c})}
-    \leqslant
-    \varepsilon\norm{z-y_{c}},
-  \]
-  whenever \({z}\in{B(y,\delta)}\). Now, for any
-  \({r}\in{\ointerval{\max\{c,1-\delta/\norm{x-y}\}}{1}}\) we get that
-  \[
-    \norm{x_{r}-y}=(1-r)\norm{x-y}<\delta,
-  \]
-  and then, that
-  \[
-    \begin{array}{rcl}
-      \norm{f(x_{r})-f(y)}
-      &\leqslant&
-      \norm{f(x_{r})-f(y)-df(y)(x_{r}-y)}+\norm{df(y)}\norm{(x_{r}-y)}
-      \\
-      &\leqslant&
-      (\varepsilon+M)\norm{x_{r}-y}
-      \\
-      &\leqslant&
-      (\varepsilon+M)(1-r)\norm{x-y}
-      \leqslant
-      (\varepsilon+M)\norm{x-y}
-    \end{array}
-  \]
-  Then, \(c<1\) and just like that we can find some \(\delta>0\) such that \(c+\delta<1\).
+	Let \(x\) and \(y\) be any pair of distinct points in \(U\). Then, the line
+	segment from \(x\) to \(y\) is contained in \(U\), that is,
+	\(y_{t}=x+t(y-x)\) belongs to \(U\) for every \({t}\in{\interval{0}{1}}\).
+	Now, consider the sets:
+	\[
+		\forall\,{N}\in{\ointerval{M}{\infty}}:\quad
+		A_{N}
+		=
+		\left\{
+		{t}\in{\interval{0}{1}}
+		:
+		{\norm{f(y_{t})-f(x)}}\leqslant{Nt\norm{y-x}}
+		\right\}
+		.
+	\]
+	We want to show that \({1}\in{A_{N}}\) for every \(N>M\). It's not an empty
+	set because \(0\) is clearly in \(A_{N}\). To see that it's a closed set, take
+	any element in its closure, say,
+	\({t}\in{\overline{A_{N}}}\subseteq{\overline{\interval{0}{1}}}=\interval{0}{1}\).
+	Now, for any sequence of points \({t_{k}}\in{A_{N}}\) such that
+	\(\lim{t_{k}}=t\), we get that \(\lim{y_{t_{k}}}=y_{t}\) and also that:
+	\[
+		\begin{array}{rcl}
+			\norm{f(y_{t})-f(x)}
+			 & =         &
+			\norm{f(\lim{y_{t_{k}}})-f(x)}
+			\\
+			 & =         &
+			\lim{\norm{f(y_{t_{k}})-f(x)}}
+			\\
+			 & \leqslant &
+			\lim{Nt_{k}\norm{y-x}}=Nt\norm{y-x},
+		\end{array}
+	\]
+	showing that \({t}\in{A_{N}}\). Thus, \(A_{N}\) is closed and
+	\(c_{N}=\sup{A_{N}}\) belongs to \(A_{N}\). We claim that \(c_{N}\) equals
+	\(1\). In fact, let's suppose that it doesn't. Since \(f\) is differentiable
+	at \(y_{c_{N}}\) we know that given \(\varepsilon=N-M>0\), there is some
+	\(r>0\) such that \({B(y_{c_{N}},r)}\subset{U}\) and:
+	\[
+		\norm{f(z)-f(y_{c_{N}})-df(y_{c_{N}})(z-y_{c_{N}})}
+		\leqslant
+		(N-M)\norm{z-y_{c_{N}}},
+	\]
+	whenever \({z}\in{B(y_{c_{N}},r)}\). Now, for any
+	\({\delta}\in{\ointerval{0}{\min\{1-c_{N},r\}}}\) we get that:
+	\[
+		\begin{array}{rcl}
+			\norm{f(y_{c_{N}+\delta})-f(x)}
+			 & \leqslant &
+			\norm{f(y_{c_{N}+\delta})-f(y_{c_{N}})-df(y_{c_{N}})(y_{c_{N}+\delta}-y_{c_{N}})}
+			+
+			\norm{f(y_{c_{N}})-f(x)}
+			\\
+			 &           & \quad
+			+
+			\norm{df(y_{c_{N}})(y_{c_{N}+\delta}-y_{c_{N}})}
+			\\
+			 & \leqslant &
+			(N-M)\norm{y_{c_{N}+\delta}-y_{c_{N}}}
+			+
+			Nc_{N}\norm{y-x}
+			+
+			M\norm{y_{c_{N}+\delta}-y_{c_{N}}}
+			\\
+			 & \leqslant &
+			N(c_{N}+\delta)\norm{y-x},
+		\end{array}
+	\]
+	showing that \({c_{N}+\delta}\in{A_{N}}\), which is a contradiction since
+	\(c_{N}+\delta>c_{N}=\sup{A_{N}}\). Hence, \(c_{N}=1\) and
+	\(\norm{f(y)-f(x)}\leqslant{N\norm{y-x}}\) for every \(N>M\). Now, we see that
+	\(\norm{f(y)-f(x)}\leqslant{M\norm{y-x}}\) by letting \({N}\to{M^{+}}\). This
+	completes the proof.
 \end{proof}
 
 \section{The Inverse Function Theorem}\label{sec:the_inverse_function_theorem}
