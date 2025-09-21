@@ -19,4 +19,4 @@ jobs:
           files: |
             main.pdf
             main.bbl
-          draft: true
+          draft: false
