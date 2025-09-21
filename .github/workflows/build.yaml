@@ -20,4 +20,3 @@ jobs:
             main.pdf
             main.bbl
           draft: true
-          tag: ${{ env.TIMESTAMP }}
