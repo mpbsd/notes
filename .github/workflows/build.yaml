@@ -19,4 +19,5 @@ jobs:
           files: |
             main.pdf
             main.bbl
-          draft: false
+          draft: true
+          tag: ${{ env.TIMESTAMP }}
