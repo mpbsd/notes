@@ -21,10 +21,14 @@ final:
 	$(DOC_VIEWER) main.pdf
 
 clean:
-	find . -type f -name main.aux | xargs rm -f
-	find . -type f -name main.blg | xargs rm -f
-	find . -type f -name main.log | xargs rm -f
-	find . -type f -name main.out | xargs rm -f
-	find . -type f -name main.toc | xargs rm -f
+	find . -type f -name main.aux        | xargs rm -rf
+	find . -type f -name main.bbl        | xargs rm -rf
+	find . -type f -name main.blg        | xargs rm -rf
+	find . -type f -name main.log        | xargs rm -rf
+	find . -type f -name main.out        | xargs rm -rf
+	find . -type f -name main.pdf        | xargs rm -rf
+	find . -type f -name main.synctex.gz | xargs rm -rf
+	find . -type f -name main.tex.bak    | xargs rm -rf
+	find . -type f -name main.toc        | xargs rm -rf
 
 .PHONY: draft final clean
