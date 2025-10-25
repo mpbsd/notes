@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -14,7 +13,7 @@ jobs:
         with:
           root_file: main.tex
       - name: Generate release version
-        run: echo "RELEASE_VERSION=release-$(date +'%Y-%m-%d-%H-%M-%S')" >> $GITHUB_ENV
+        run: echo "RELEASE_VERSION=notes-$(date +'%Y-%m-%d-%H-%M-%S')" >> $GITHUB_ENV
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
